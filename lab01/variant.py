@@ -21,6 +21,7 @@ without_delivery_disc=(item_cost_f+item_cost_s)*(1-disc/100)
 total=without_delivery_disc+delivery_cost
 total_n=item_n_f+item_n_s
 change=paid-total
+price_disc=without_delivery-without_delivery_disc
 
 print(f"Заказ: {order_name}")
 print(f"Заказчик: {c_name}")
@@ -29,6 +30,7 @@ print(f"{item_name_f} | {item_n_f} | {item_price_f:.2f} | {item_cost_f:.2f}")
 print(f"{item_name_s} | {item_n_s} | {item_price_s:.2f} | {item_cost_s:.2f}")
 print(f"Стоимость товаров без доставки: {without_delivery:.2f}")
 print(f"Стоимость товаров без доставки(с учетом скидки): {without_delivery_disc:.2f}")
+print(f"Скидка в Р: {price_disc:.2f}")
 print(f"Общая сумма с доставкой: {total:.2f}")
 print(f"Общее количество единиц: {total_n}")
 print(f"Сдача: {change:.2f}")
